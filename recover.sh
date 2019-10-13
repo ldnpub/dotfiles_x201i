@@ -2,11 +2,12 @@
 
 
 loadkeys fr
+dhclient
 
-mount -o remount,size=2G /run/archiso/cowspace
-pacman -Sy git
-git clone git://github.com/helmuthdu/aui
-git clone git://github.com/ldnpub/dotfiles_x201i
+#mount -o remount,size=2G /run/archiso/cowspace
+#pacman -Sy git
+#git clone git://github.com/helmuthdu/aui
+#git clone git://github.com/ldnpub/dotfiles_x201i
 cryptsetup luksOpen /dev/sda2 btrfs-system
 mount -o subvol=root,ssd /dev/mapper/btrfs-system /mnt
 mount -o subvol=home,ssd /dev/mapper/btrfs-system /mnt/home
