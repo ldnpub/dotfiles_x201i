@@ -16,3 +16,4 @@ mount -o subvol=swap,ssd /dev/mapper/btrfs-system /mnt/swap
 swapon /mnt/swap/swapfile
 mount /dev/mapper/boot_crypt /mnt/boot
 arch-chroot /mnt /bin/zsh
+echo "Arch-chroot done"
